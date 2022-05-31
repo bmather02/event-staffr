@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%=staff.firstName%> <%=staff.lastName%></h1>
+    <p>Skills: 
+        <ul>
+        <%for (let i=0; i < staff.skills.length; i++) {%>
+    <li><%=staff.skills[i]%></li>
+    <%}%>
+        </ul>
+</p>
+<p>Arrival Time: <%=staff.arrival%></p>
+<p>Departure Time: <%=staff.departure%></p>
+
+
+<% if (staff.isDancingWithStudents === true){%>
+    <p>Student Categories: 
+        <ul>
+            <% for (let i=0; i < staff.studentCategories.length; i++) {%>
+                <li><%=staff.studentCategories[i]%></li>
+                <%}%>
+        </ul></p>
+    <p>Student Age Divisions: 
+        <ul>
+            <% for (let i=0; i < staff.studentAgeDivisions; i++) {%>
+            <li><%=staff.studentAgeDivisions[i]%></li>
+            <%}%>
+        </ul></p>
+    <%} else {%>
+        <p><%=staff.firstName%> is not dancing with students.</p>
+        <%}%>
+
+
+<%if (staff.isCompeting === true) {%>
+    <p>Categories: 
+        <ul>
+        <% for (let i=0; i < staff.categories.length; i++){%>
+            <li><%=staff.categories[i]%></li>
+            <%}%>
+        </ul>
+        </p>
+    <p>Age Divisions: 
+        <ul>
+            <% for (let i=0; i < staff.ageDivisions.length; i++) {%>
+            <li><%=staff.ageDivisions[i]%></li>
+            <%}%>
+        </ul>
+    </p>
+    <%} else {%>
+        <p><%=staff.firstName%> is not competing.</p>
+        <%}%>
+
+
+    <%if (Boolean(staff.qualifiedToJudge) !== true) {%>
+    <p>Qualified To Judge: <%=staff.qualifiedToJudge%></p>
+    <p>Judging: 
+        <ul>
+            <%for (let i=0; i < staff.judging.length; i++) {%>
+                <li><%=staff.judging[i]%></li>
+        </ul>
+    </p>
+    <%} else {%>
+        <p><%=staff.firstName%> is not qualified to judge.</p>
+        <%}%>
+
+
+<% if (Boolean(staff.teaching) !==true) {%>
+<ul><%=staff.firstName%> is teaching:
+<% for (let i=0; i < staff.teaching.length; i++) {%>
+    <li><%=staff.teaching[i]%></li>
+    <%}%>
+</ul>
+<%} else {%>
+    <p><%=staff.firstName%> is not teaching.</p>
+    <%}%>
+
+
+</body>
+</html>
