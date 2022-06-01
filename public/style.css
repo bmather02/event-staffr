@@ -1,0 +1,56 @@
+body {
+    background-color: rgb(212, 218, 226);
+    display:flex;
+    justify-content: center;
+}
+
+main {
+    background-color: rgb(234, 237, 241);
+    width: 80vw;
+    min-height: 98vh;
+    padding: 2vh;
+    margin: 2vh;
+    border-radius: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+div {
+    border: .05vw solid rgb(210, 216, 228);
+    border-radius: 1%;
+    box-shadow: .5vw .5vw 1.25vw gray;
+    background-color: rgb(238, 240, 242);
+}
+
+.box {
+    height: 25vh;
+    width:25vw;
+    padding: 2.5vw;
+    margin: 2.5vw;
+    display: flex;
+    justify-content: center;
+}
+.editBanner {
+    width: 65vw;
+    margin: 1vw 7.5vw;
+    padding: 1.5vw;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.titleBanner {
+    width: 65vw;
+    margin: 1vw 7.5vw;
+    padding: 1.5vw;
+    display: flex;
+    justify-content: center;
+    
+}
+p {
+    font-size: 1.5vw;
+}
+ul{
+    font-size: 1.5vw;
+}

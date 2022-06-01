@@ -14,6 +14,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 //middleware
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
+app.use("/public", express.static("public"))
 
 //routers
 app.use('/staff', staffController)

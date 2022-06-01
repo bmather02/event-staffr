@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Staff Member: <%=staff.firstName%> <%=staff.lastName%></h1>
+    <main>
+    <a href="/staff">Back To Full Staff List</a>
+    <h1 class="titleBanner">Staff Member: <%=staff.firstName%> <%=staff.lastName%></h1>
+    <div class="box">
     <p>Arrival Time: <%=staff.arrival%></p>
     <p>Departure Time: <%=staff.departure%></p>
+</div>
     
     <% if (staff.skills.length != 0) {%>
+        <div class="box">
         <p>Skills: 
             <ul>
             <%for (let i=0; i < staff.skills.length; i++) {%>
@@ -19,21 +25,27 @@
         <%}%>
             </ul>
     </p>
+</div>
    <% } %>    
 
 <% if (staff.isDancingWithStudents === "Yes"){%>
+    <div class="box">
     <p><%=staff.firstName%> is dancing with students in: 
         <ul>
             <% for (let i=0; i < staff.studentCategories.length; i++) {%>
                 <li><%=staff.studentCategories[i]%></li>
                 <%}%>
         </ul></p>
+        </div>
     <%} else {%>
+        <div class="box">
         <p><%=staff.firstName%> is not dancing with students.</p>
         <%}%>
+    </div>
 
 
 <%if (staff.isCompeting === "Yes") {%>
+    <div class="box">
     <p><%=staff.firstName%> is competing in: 
         <ul>
         <% for (let i=0; i < staff.categories.length; i++){%>
@@ -41,12 +53,15 @@
             <%}%>
         </ul>
         </p>
+    </div>
     <%} else {%>
+        <div class="box">
         <p><%=staff.firstName%> is not competing.</p>
         <%}%>
-
+    </div>
 
     <%if (staff.qualifiedToJudge.length != 0) {%>
+        <div class="box">
     <p><%=staff.firstName%> is Qualified To Judge: 
         <ul>
             <% for (let i = 0; i < staff.qualifiedToJudge.length; i++) {%>
@@ -65,12 +80,16 @@
     <%} else {%>
         <p>but is not judging any divisions.</p>
         <%}%>
+    </div>
     <%} else {%>
+        <div class="box">
         <p><%=staff.firstName%> is not qualified to judge.</p>
+    </div>
         <%}%>
 
 
 <% if (staff.teaching.length != 0) {%>
+    <div class="box">
     <p><%=staff.firstName%> is teaching:
 <ul>
 <% for (let i=0; i < staff.teaching.length; i++) {%>
@@ -78,13 +97,18 @@
     <%}%>
 </ul>
 </p>
+</div>
 <%} else {%>
+    <div class="box">
     <p><%=staff.firstName%> is not teaching.</p>
+</div>
     <%}%>
-
+<div class="editBanner">
 <a href="/staff/<%=staff._id%>/edit">Edit Staff Member</a>
 <form action="/staff/<%=staff._id%>?_method=DELETE" method="POST">
     <input type="submit" value="Delete Staff Member">
 </form>
+</div>
+    </main>
 </body>
 </html>
