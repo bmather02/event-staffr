@@ -1,5 +1,6 @@
 const express = require('express');
 const { append } = require('express/lib/response');
+const { rawListeners } = require('../models/staff');
 const router = express.Router();
 const Staff = require('../models/staff');
 
@@ -18,6 +19,11 @@ router.get("/new", (req, res) => {
 });
 
 //Delete
+router.delete("/:id", (req, res) => {
+    Staff.findByIdAndRemove(req.params.id, () => {
+        res.redirect("/staff");
+    });
+});
 
 //Update
 
@@ -27,6 +33,8 @@ router.post("/", (req, res) => {
     req.body.judging = []
     req.body.teaching = []
     req.body.qualifiedToJudge = []
+    req.body.studentCategories = []
+    req.body.categories = []
     console.log(req.body)
     if (req.body.scoring){
         req.body.skills.push("Scoring")
@@ -56,15 +64,37 @@ router.post("/", (req, res) => {
         req.body.skills.push("Registration Desk")
         delete req.body.registration_Desk
     }
-    if (req.body.isDancingWithStudents === "on"){
-        req.body.isDancingWithStudents = true
-    } else {
-        req.body.isDancingWithStudents = false
+    if (req.body.Newcomer){
+        req.body.studentCategories.push("Newcomer")
+        delete req.body.Newcomer
     }
-    if (req.body.isCompeting === "on"){
-        req.body.isCompeting = true
-    } else {
-        req.body.isCompeting = false
+    if (req.body.Novice){
+        req.body.studentCategories.push("Novice")
+        delete req.body.Novice
+    }
+    if (req.body.Intermediate){
+        req.body.studentCategories.push("Intermediate")
+        delete req.body.Intermediate
+    }
+    if (req.body.Advanced){
+        req.body.studentCategories.push("Advanced")
+        delete req.body.Advanced
+    }
+    if (req.body.Division_II){
+        req.body.categories.push("Division II")
+        delete req.body.Division_II
+    }
+    if (req.body.Division_I){
+        req.body.categories.push("Division I")
+        delete req.body.Division_I
+    }
+    if (req.body.Masters){
+        req.body.categories.push("Masters")
+        delete req.body.Masters
+    }
+    if (req.body.Crown){
+        req.body.categories.push("Crown")
+        delete req.body.Crown
     }
     if (req.body.couplesApprentice){
         req.body.qualifiedToJudge.push("Couples Apprentice")
@@ -97,23 +127,21 @@ router.post("/", (req, res) => {
     if (req.body.lineMaster){
         req.body.qualifiedToJudge.push("Line Master")
         delete req.body.lineMaster
-    }
-    
+    } 
     console.log(req.body)
-        // for (let i=0; i < req.body.length; i++){
-        //     console.log(req.body[i])
-        //     if (req.body[i] === "on"){
-        //         req.body.skills = req.body[i]
-        //         console.log("Found one!")
-        //     }
-        // }
-    
     Staff.create(req.body, (err, createdStaff) => {
         res.redirect("/staff");
     });
 });
 
 //Edit
+router.get("/:id/edit", (req, res) => {
+    Staff.findById(req.params.id, (err, foundStaff) => {
+        res.render("staff/edit.ejs", {
+            staff: foundStaff
+        })
+    })
+})
 
 //Show
 router.get("/:id", (req, res) => {

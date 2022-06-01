@@ -9,8 +9,9 @@
 <body>
     <h1>Add A New Staff Member</h1>
     <form action="/staff" method="POST">
-        <input type="text" name="firstName" placeholder="First Name"> <br/>
-        <input type="text" name="lastName" placeholder="Last Name"> <br/>
+        <input type="text" name="firstName" placeholder="First Name" required> <br/>
+        <input type="text" name="lastName" placeholder="Last Name" required> <br/>
+        <input type="text" name="partner" placeholder="Partner's First and Last Name">
        <p>Administrative Skills:</p>
        <label for="scoring">Scoring</label>
         <input type="checkbox" id="scoring" name="scoring">
@@ -27,13 +28,41 @@
         <label for="regDesk">Registration Desk</label>
         <input type="checkbox" id="regDesk" name="registration_Desk"><br/>
         <p>Arrival Time</p>
-        <input type="datetime-local" name="arrival"> <br/>
+        <input type="datetime-local" name="arrival" required> <br/>
         <p>Departure Time</p>
-        <input type="datetime-local" name="departure"> <br/>
-        <label for="isDancingWithStudents">Dancing With Students?</label>
-        <input type="checkbox" id="isDancingWithStudents" name="isDancingWithStudents"><br/>
-        <label for="isCompeting">Competing?</label>
-        <input type="checkbox" name="isCompeting" id="isCompeting" placeholder="First Name"> <br/>
+        <input type="datetime-local" name="departure" required> <br/>
+        <p>Is this staff member dancing with students?
+            <label for="isDancingWithStudents">Yes</label>
+            <input type="radio" id="isDancingWithStudents" name="isDancingWithStudents" value="Yes">
+            <label for="isNotDancingWithStudents">No</label>
+            <input type="radio" id="isNotDancingWithStudents" name="isDancingWithStudents" value="No">
+        </p>
+        <div id="proam">
+            <label for="Newcomer">Newcomer</label>
+            <input type="checkbox" id="Newcomer" name="Newcomer">
+            <label for="Novice">Novice</label>
+            <input type="checkbox" id="Novice" name="Novice">
+            <label for="Intermediate">Intermediate</label>
+            <input type="checkbox" id="Intermediate" name="Intermediate">
+            <label for="Advanced">Advanced</label>
+            <input type="checkbox" id="Advanced" name="Advanced">
+        </div>
+        <p>Is this staff member competing professionally?
+            <label for="isCompeting">Yes</label>
+            <input type="radio" name="isCompeting" id="isCompeting" value="Yes" required>
+            <label for="isNotCompeting">No</label>
+            <input type="radio" name="isCompeting" id="isNotCompeting" value="No" required>
+        </p>
+        <div id="pro">
+            <label for="Division_II">Division II</label>
+            <input type="checkbox" id="Division_II" name="Division_II">
+            <label for="Division_I">Division I</label>
+            <input type="checkbox" id="Division_I" name="Division_I">
+            <label for="Masters">Masters</label>
+            <input type="checkbox" id="Masters" name="Masters">
+            <label for="Crown">Crown</label>
+            <input type="checkbox" id="Crown" name="Crown">
+        </div>
         <p>Qualified To Judge:</p>
         <label for="couplesApprentice">Couples Apprentice</label>
         <input type="checkbox" id="couplesApprentice" name="couplesApprentice">

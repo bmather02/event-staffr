@@ -7,51 +7,40 @@
     <title>Document</title>
 </head>
 <body>
-    <h1><%=staff.firstName%> <%=staff.lastName%></h1>
-    <p>Skills: 
-        <ul>
-        <%for (let i=0; i < staff.skills.length; i++) {%>
-    <li><%=staff.skills[i]%></li>
-    <%}%>
-        </ul>
-</p>
-<p>Arrival Time: <%=staff.arrival%></p>
-<p>Departure Time: <%=staff.departure%></p>
+    <h1>Staff Member: <%=staff.firstName%> <%=staff.lastName%></h1>
+    <p>Arrival Time: <%=staff.arrival%></p>
+    <p>Departure Time: <%=staff.departure%></p>
+    
+    <% if (Boolean(staff.skills) === true) {%>
+        <p>Skills: 
+            <ul>
+            <%for (let i=0; i < staff.skills.length; i++) {%>
+        <li><%=staff.skills[i]%></li>
+        <%}%>
+            </ul>
+    </p>
+   <% } %>    
 
-
-<% if (staff.isDancingWithStudents === true){%>
+<% if (staff.isDancingWithStudents === "Yes"){%>
     <p>Student Categories: 
         <ul>
             <% for (let i=0; i < staff.studentCategories.length; i++) {%>
                 <li><%=staff.studentCategories[i]%></li>
                 <%}%>
         </ul></p>
-    <p>Student Age Divisions: 
-        <ul>
-            <% for (let i=0; i < staff.studentAgeDivisions; i++) {%>
-            <li><%=staff.studentAgeDivisions[i]%></li>
-            <%}%>
-        </ul></p>
     <%} else {%>
         <p><%=staff.firstName%> is not dancing with students.</p>
         <%}%>
 
 
-<%if (staff.isCompeting === true) {%>
-    <p>Categories: 
+<%if (staff.isCompeting === "Yes") {%>
+    <p><%=staff.firstName%> is competing in: 
         <ul>
         <% for (let i=0; i < staff.categories.length; i++){%>
             <li><%=staff.categories[i]%></li>
             <%}%>
         </ul>
         </p>
-    <p>Age Divisions: 
-        <ul>
-            <% for (let i=0; i < staff.ageDivisions.length; i++) {%>
-            <li><%=staff.ageDivisions[i]%></li>
-            <%}%>
-        </ul>
-    </p>
     <%} else {%>
         <p><%=staff.firstName%> is not competing.</p>
         <%}%>
@@ -60,8 +49,11 @@
     <%if (Boolean(staff.qualifiedToJudge) !== true) {%>
     <p>Qualified To Judge: 
         <ul>
-            <% for (let i = 0; i < staff.qualifiedToJudge.length%>
-        </ul><%=staff.qualifiedToJudge%></p>
+            <% for (let i = 0; i < staff.qualifiedToJudge.length; i++) {%>
+                <li><%=staff.qualifiedToJudge[i]%></li>
+                <%}%>
+        </ul>
+    </p>
     <p>Judging: 
         <ul>
             <%for (let i=0; i < staff.judging.length; i++) {%>
@@ -75,11 +67,13 @@
 
 
 <% if (Boolean(staff.teaching) !==true) {%>
-<ul><%=staff.firstName%> is teaching:
+    <p><%=staff.firstName%> is teaching:
+<ul>
 <% for (let i=0; i < staff.teaching.length; i++) {%>
     <li><%=staff.teaching[i]%></li>
     <%}%>
 </ul>
+</p>
 <%} else {%>
     <p><%=staff.firstName%> is not teaching.</p>
     <%}%>
