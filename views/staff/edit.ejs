@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit <%=staff.firstName%> <%=staff.lastName%>'s Info</h1>
+    <form action="/staff/<%=staff._id%>?_method=PUT" method="POST">
+        <input type="text" name="firstName" value="<%=staff.firstName%>" required> <br/>
+        <input type="text" name="lastName" value="<%=staff.lastName%>" required> <br/>
+        <input type="text" name="partner" placeholder="Partner's First and Last Name" value="<%=staff.partner%>">
+       <p>Administrative Skills:</p>
+       <label for="scoring">Scoring</label>
+        <input type="checkbox" id="scoring" name="scoring" <% if (staff.skills.includes("Scoring")){%>
+            checked
+            <%}%> >
+        <label for="emcee">Emcee</label>
+        <input type="checkbox" id="emcee" name="emcee"
+        <% if (staff.skills.includes("Emcee")){%>
+            checked
+            <%}%>
+            >
+        <label for="floorMom">Floor Mom</label>
+        <input type="checkbox" id="floorMom" name="floor_Mom"
+        <% if (staff.skills.includes("Floor Mom")){%>
+            checked
+            <%}%>
+            >
+        <label for="contestCoordinator">Contest Coordinator</label>
+        <input type="checkbox" id="contestCoordinator" name="contest_Coordinator"
+        <% if (staff.skills.includes("Contest Coordinator")){%>
+            checked
+            <%}%>
+            >
+        <label for="hospitality">Hospitality</label>
+        <input type="checkbox" id="hospitality" name="hospitality"
+        <% if (staff.skills.includes("Hospitality")){%>
+            checked
+            <%}%>
+            >
+        <label for="scrutineering">Scrutineering</label>
+        <input type="checkbox" id="scrutineering" name="scrutineering"
+        <% if (staff.skills.includes("Scrutineering")){%>
+            checked
+            <%}%>
+            >
+        <label for="regDesk">Registration Desk</label>
+        <input type="checkbox" id="regDesk" name="registration_Desk"
+        <% if (staff.skills.includes("Registration Desk")){%>
+            checked
+            <%}%>
+            ><br/>
+        <p>Arrival Time</p>
+        <input type="datetime-local" name="arrival" value="<%=staff.arrival%>" required> <br/>
+        <p>Departure Time</p>
+        <input type="datetime-local" name="departure" value="<%=staff.departure%>" required> <br/>
+        <p>Is this staff member dancing with students?
+            <label for="isDancingWithStudents">Yes</label>
+            <input type="radio" id="isDancingWithStudents" name="isDancingWithStudents" value="Yes" 
+            <% if (staff.isDancingWithStudents === "Yes"){%>
+                checked
+                <%}%> >
+            <label for="isNotDancingWithStudents">No</label>
+            <input type="radio" id="isNotDancingWithStudents" name="isDancingWithStudents" value="No"
+            <% if (staff.isDancingWithStudents === "No"){%>
+                checked
+                <%}%>
+                >
+        </p>
+        <div id="proam">
+            <label for="Newcomer">Newcomer</label>
+            <input type="checkbox" id="Newcomer" name="Newcomer"
+            <% if (staff.studentCategories.includes("Newcomer")){%>
+                checked
+                <%}%>
+                >
+            <label for="Novice">Novice</label>
+            <input type="checkbox" id="Novice" name="Novice"
+            <% if (staff.studentCategories.includes("Novice")){%>
+                checked
+                <%}%>
+                >
+            <label for="Intermediate">Intermediate</label>
+            <input type="checkbox" id="Intermediate" name="Intermediate"
+            <% if (staff.studentCategories.includes("Intermediate")){%>
+                checked
+                <%}%>
+                >
+            <label for="Advanced">Advanced</label>
+            <input type="checkbox" id="Advanced" name="Advanced"
+            <% if (staff.studentCategories.includes("Advanced")){%>
+                checked
+                <%}%>
+                >
+        </div>
+        <p>Is this staff member competing professionally?
+            <label for="isCompeting">Yes</label>
+            <input type="radio" name="isCompeting" id="isCompeting" value="Yes" required
+            <% if (staff.isCompeting === "Yes"){%>
+                checked
+                <%}%> >
+            <label for="isNotCompeting">No</label>
+            <input type="radio" name="isCompeting" id="isNotCompeting" value="No" required
+            <% if (staff.isCompeting === "No"){%>
+                checked
+                <%}%> >
+        </p>
+        <div id="pro">
+            <label for="Division_II">Division II</label>
+            <input type="checkbox" id="Division_II" name="Division_II"
+            <% if (staff.categories.includes("Division II")){%>
+                checked
+                <%}%>
+                >
+            <label for="Division_I">Division I</label>
+            <input type="checkbox" id="Division_I" name="Division_I"
+            <% if (staff.categories.includes("Division I")){%>
+                checked
+                <%}%>
+                >
+            <label for="Masters">Masters</label>
+            <input type="checkbox" id="Masters" name="Masters"
+            <% if (staff.categories.includes("Masters")){%>
+                checked
+                <%}%>
+                >
+            <label for="Crown">Crown</label>
+            <input type="checkbox" id="Crown" name="Crown"
+            <% if (staff.categories.includes("Crown")){%>
+                checked
+                <%}%>
+                >
+        </div>
+        <p>Qualified To Judge:</p>
+        <label for="couplesApprentice">Couples Apprentice</label>
+        <input type="checkbox" id="couplesApprentice" name="couplesApprentice"
+        <% if (staff.qualifiedToJudge.includes("Couples Apprentice")){%>
+            checked
+            <%}%>
+            >
+        <label for="lineApprentice">Line Apprentice</label>
+        <input type="checkbox" id="lineApprentice" name="lineApprentice"
+        <% if (staff.qualifiedToJudge.includes("Line Apprentice")){%>
+            checked
+            <%}%>
+            >
+        <label for="couplesFundamental">Couples Fundamental</label>
+        <input type="checkbox" id="couplesFundamental" name="couplesFundamental"
+        <% if (staff.qualifiedToJudge.includes("Couples Fundamental")){%>
+            checked
+            <%}%>
+            >
+        <label for="lineFundamental">Line Fundamental</label>
+        <input type="checkbox" id="lineFundamental" name="lineFundamental"
+        <% if (staff.qualifiedToJudge.includes("Line Fundamental")){%>
+            checked
+            <%}%>
+            >
+        <label for="couplesJourneyman">Couples Journeyman</label>
+        <input type="checkbox" id="couplesJourneyman" name="couplesJourneyman"
+        <% if (staff.qualifiedToJudge.includes("Couples Journeyman")){%>
+            checked
+            <%}%>
+            >
+        <label for="lineJourneyman">Line Journeyman</label>
+        <input type="checkbox" id="lineJourneyman" name="lineJourneyman"
+        <% if (staff.qualifiedToJudge.includes("Line Journeyman")){%>
+            checked
+            <%}%>
+            >
+        <label for="couplesMaster">Couples Master</label>
+        <input type="checkbox" id="couplesMaster" name="couplesMaster"
+        <% if (staff.qualifiedToJudge.includes("Couples Master")){%>
+            checked
+            <%}%>
+            >
+        <label for="lineMaster">Line Master</label>
+        <input type="checkbox" id="lineMaster" name="lineMaster"
+        <% if (staff.qualifiedToJudge.includes("Line Master")){%>
+            checked
+            <%}%>
+            ><br/>
+        <input type="submit" value="Update <%=staff.firstName%> <%=staff.lastName%>'s Info">
+    </form>
+</body>
+</html>
