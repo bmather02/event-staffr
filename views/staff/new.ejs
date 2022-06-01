@@ -8,5 +8,50 @@
 </head>
 <body>
     <h1>Add A New Staff Member</h1>
+    <form action="/staff" method="POST">
+        <input type="text" name="firstName" placeholder="First Name"> <br/>
+        <input type="text" name="lastName" placeholder="Last Name"> <br/>
+       <p>Administrative Skills:</p>
+       <label for="scoring">Scoring</label>
+        <input type="checkbox" id="scoring" name="scoring">
+        <label for="emcee">Emcee</label>
+        <input type="checkbox" id="emcee" name="emcee">
+        <label for="floorMom">Floor Mom</label>
+        <input type="checkbox" id="floorMom" name="floor_Mom">
+        <label for="contestCoordinator">Contest Coordinator</label>
+        <input type="checkbox" id="contestCoordinator" name="contest_Coordinator">
+        <label for="hospitality">Hospitality</label>
+        <input type="checkbox" id="hospitality" name="hospitality">
+        <label for="scrutineering">Scrutineering</label>
+        <input type="checkbox" id="scrutineering" name="scrutineering">
+        <label for="regDesk">Registration Desk</label>
+        <input type="checkbox" id="regDesk" name="registration_Desk"><br/>
+        <p>Arrival Time</p>
+        <input type="datetime-local" name="arrival"> <br/>
+        <p>Departure Time</p>
+        <input type="datetime-local" name="departure"> <br/>
+        <label for="isDancingWithStudents">Dancing With Students?</label>
+        <input type="checkbox" id="isDancingWithStudents" name="isDancingWithStudents"><br/>
+        <label for="isCompeting">Competing?</label>
+        <input type="checkbox" name="isCompeting" id="isCompeting" placeholder="First Name"> <br/>
+        <p>Qualified To Judge:</p>
+        <label for="couplesApprentice">Couples Apprentice</label>
+        <input type="checkbox" id="couplesApprentice" name="couplesApprentice">
+        <label for="lineApprentice">Line Apprentice</label>
+        <input type="checkbox" id="lineApprentice" name="lineApprentice">
+        <label for="couplesFundamental">Couples Fundamental</label>
+        <input type="checkbox" id="couplesFundamental" name="couplesFundamental">
+        <label for="lineFundamental">Line Fundamental</label>
+        <input type="checkbox" id="lineFundamental" name="lineFundamental">
+        <label for="couplesJourneyman">Couples Journeyman</label>
+        <input type="checkbox" id="couplesJourneyman" name="couplesJourneyman">
+        <label for="lineJourneyman">Line Journeyman</label>
+        <input type="checkbox" id="lineJourneyman" name="lineJourneyman">
+        <label for="couplesMaster">Couples Master</label>
+        <input type="checkbox" id="couplesMaster" name="couplesMaster">
+        <label for="lineMaster">Line Master</label>
+        <input type="checkbox" id="lineMaster" name="lineMaster"><br/>
+        <input type="submit" value="Add Staff Member">
+    </form>
 </body>
 </html>

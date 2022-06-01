@@ -58,11 +58,15 @@
 
 
     <%if (Boolean(staff.qualifiedToJudge) !== true) {%>
-    <p>Qualified To Judge: <%=staff.qualifiedToJudge%></p>
+    <p>Qualified To Judge: 
+        <ul>
+            <% for (let i = 0; i < staff.qualifiedToJudge.length%>
+        </ul><%=staff.qualifiedToJudge%></p>
     <p>Judging: 
         <ul>
             <%for (let i=0; i < staff.judging.length; i++) {%>
                 <li><%=staff.judging[i]%></li>
+                <%}%>
         </ul>
     </p>
     <%} else {%>
@@ -80,6 +84,9 @@
     <p><%=staff.firstName%> is not teaching.</p>
     <%}%>
 
-
+<a href="/staff/<%=staff._id%>/edit">Edit Staff Member</a>
+<form action="/staff/<%=staff._id%>?_method=DELETE" method="POST">
+    <input type="submit" value="Delete Staff Member">
+</form>
 </body>
 </html>
