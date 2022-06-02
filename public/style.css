@@ -1,3 +1,4 @@
+
 body {
     background-color: #3BACB6;
     display:flex;
@@ -7,7 +8,7 @@ body {
     flex-wrap: wrap;
 }
 nav {
-    height: 12vh;
+    height: 10vh;
     width: 80vw;
     padding: 4vh 2vh 2vh 2vh;
     margin: -2vh 0 0 0;
@@ -18,11 +19,165 @@ nav {
     align-items: center;
     flex-wrap: wrap;
 }
+.logo{
+    height:10vh;
+    margin: -2vh 0 0 0;
+}
 nav>div {
-    width: 35vw;
+    width: 60vw;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1vw 0;
 }
+main {
+    background-color: #B3E8E5;
+    width: 80vw;
+    min-height: 75vh;
+    padding: 2vh;
+    margin: 2vh;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+
+}
+.box {
+    border: .05vw solid rgb(210, 216, 228);
+    border-radius: 5px;
+    box-shadow: .5vw .5vw 1.25vw #2F8F9D;
+    background-color: #FFFFFF;
+    color: black;
+    height: 28vh;
+    width:70vw;
+    padding: 1.5vw;
+    margin: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: row;
+}
+.editBanner {
+    width: 80vw;
+    margin: 1vw;
+    padding: 1.5vw;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.titleBanner {
+    width: 65vw;
+    margin: 1vw;
+    padding: 1.5vw;
+    display: flex;
+    justify-content: center;
+    text-shadow: .13vw .13vw .4vw #0d5964;
+}
+p {
+    font-size: 4vw;
+    padding: 1vw;
+}
+ul{
+    font-size: 4vw;
+}
+h1 {
+    font-size: 7vw;
+}
+.button{
+    background-color: #2F8F9D;
+    padding: 1vw;
+    color: white;
+    border-radius: 5px;
+    font-size: 4vw;
+    text-decoration: none;
+    text-shadow: .1vw .1vw .2vw #0d5964;
+    transition: 200ms;
+    border-style: none;
+}
+.button:hover{
+    background-color: #2F8F9D;
+    padding: 1vw;
+    color: white;
+    border-radius: 5px;
+    font-size: 4vw;
+    text-decoration: none;
+    text-shadow: .1vw .1vw .2vw #0d5964;
+    box-shadow: 0 0 .5vw #0d5964;
+    border-style: none;
+}
+.deleteButton{
+    background-color: #2F8F9D;
+    padding: 1vw;
+    color: white;
+    border-radius: 5px;
+    font-size: 4vw;
+    text-decoration: none;
+    text-shadow: .1vw .1vw .2vw #0d5964;
+    border-style: none;
+    transition: 200ms;
+}
+.deleteButton:hover {
+    background-color: #2F8F9D;
+    padding: 1vw;
+    color: white;
+    border-radius: 5px;
+    font-size: 4vw;
+    text-decoration: none;
+    text-shadow: .1vw .1vw .2vw #0d5964;
+    box-shadow: 0 0 .5vw red;
+    border-style: none;
+    cursor:pointer;
+}
+.inner{
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    font-size: 4vw;
+}
+.edit>form{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    width: 70vw;
+    color: black;
+    padding: 5vw 5vw 0 5vw;
+    box-shadow: .5vw .5vw 1.25vw #2F8F9D;
+    margin: 0 0 3vh 0;
+    display: flex;
+    flex-direction: column;
+}
+.edit>form>input{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.edit>form>.editBanner {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 0 -5vw;
+    padding: 5vw 0;
+}
+.add{
+    margin: auto 10vw;
+}
+.list {
+   text-decoration: none;
+   list-style: none;
+   width: 80vw;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+}
+.checkbox {
+    margin: 0 1vw 0 0;
+}
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 7vw;
+    text-shadow: .1vw .1vw .2vw #0d5964;
+}
+@media only screen and (min-width: 500px) {
 
 main {
     background-color: #B3E8E5;
@@ -176,4 +331,5 @@ a {
     color: white;
     font-size: 2.5vw;
     text-shadow: .1vw .1vw .2vw #0d5964;
+}
 }
