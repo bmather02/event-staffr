@@ -49,7 +49,7 @@ main {
     box-shadow: .5vw .5vw 1.25vw #2F8F9D;
     background-color: #FFFFFF;
     color: black;
-    height: 28vh;
+    height: 24vh;
     width:70vw;
     padding: 1.5vw;
     margin: 1.5vw;
@@ -178,7 +178,28 @@ a {
     text-shadow: .1vw .1vw .2vw #0d5964;
 }
 @media only screen and (min-width: 500px) {
-
+    nav {
+        height: 12vh;
+        width: 80vw;
+        padding: 4vh 2vh 2vh 2vh;
+        margin: -2vh 0 0 0;
+        background-color: #B3E8E5;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    nav>div {
+        width: 30vw;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 1vw 0;
+    }
+    nav>div>.button{
+        margin: 1vw .05vw;
+    }
 main {
     background-color: #B3E8E5;
     width: 80vw;
@@ -243,7 +264,7 @@ h1 {
     padding: 1vw;
     color: white;
     border-radius: 5px;
-    font-size: 22px;
+    font-size: 1.5vw;
     text-decoration: none;
     text-shadow: .1vw .1vw .2vw #0d5964;
     transition: 200ms;
@@ -254,7 +275,7 @@ h1 {
     padding: 1vw;
     color: white;
     border-radius: 5px;
-    font-size: 22px;
+    font-size: 1.5vw;
     text-decoration: none;
     text-shadow: .1vw .1vw .2vw #0d5964;
     box-shadow: 0 0 .5vw #0d5964;
@@ -265,7 +286,7 @@ h1 {
     padding: 1vw;
     color: white;
     border-radius: 5px;
-    font-size: 22px;
+    font-size: 1.5vw;
     text-decoration: none;
     text-shadow: .1vw .1vw .2vw #0d5964;
     border-style: none;
@@ -276,7 +297,7 @@ h1 {
     padding: 1vw;
     color: white;
     border-radius: 5px;
-    font-size: 22px;
+    font-size: 1.5vw;
     text-decoration: none;
     text-shadow: .1vw .1vw .2vw #0d5964;
     box-shadow: 0 0 .5vw red;
@@ -331,5 +352,9 @@ a {
     color: white;
     font-size: 2.5vw;
     text-shadow: .1vw .1vw .2vw #0d5964;
+    transition: 200ms;
+}
+li>a:hover{
+    text-shadow: .1vw .1vw .4vw #0d5964;
 }
 }
