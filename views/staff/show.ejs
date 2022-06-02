@@ -8,8 +8,15 @@
     <title>Document</title>
 </head>
 <body>
+    <nav>
+        <img src="https://bradleymather.com/wp-content/uploads/2022/06/Event_Staffr-removebg-preview.png" class="logo">
+        <div>
+        <a href="/" class="button">Home</a>
+        <a href="/staff" class="button">Back To Full Staff List</a>
+    </div>
+    </nav>
     <main>
-    <a href="/staff">Back To Full Staff List</a>
+    
     <h1 class="titleBanner">Staff Member: <%=staff.firstName%> <%=staff.lastName%></h1>
     <div class="box">
     <p>Arrival Time: <%=staff.arrival%></p>
@@ -18,7 +25,7 @@
     
     <% if (staff.skills.length != 0) {%>
         <div class="box">
-        <p>Skills: 
+        <p><div class="inner">Skills: </div>
             <ul>
             <%for (let i=0; i < staff.skills.length; i++) {%>
         <li><%=staff.skills[i]%></li>
@@ -30,7 +37,7 @@
 
 <% if (staff.isDancingWithStudents === "Yes"){%>
     <div class="box">
-    <p><%=staff.firstName%> is dancing with students in: 
+    <p><div class="inner"><%=staff.firstName%> is dancing with students in: </div>
         <ul>
             <% for (let i=0; i < staff.studentCategories.length; i++) {%>
                 <li><%=staff.studentCategories[i]%></li>
@@ -46,7 +53,7 @@
 
 <%if (staff.isCompeting === "Yes") {%>
     <div class="box">
-    <p><%=staff.firstName%> is competing in: 
+    <p><div class="inner"><%=staff.firstName%> is competing in: </div>
         <ul>
         <% for (let i=0; i < staff.categories.length; i++){%>
             <li><%=staff.categories[i]%></li>
@@ -62,7 +69,7 @@
 
     <%if (staff.qualifiedToJudge.length != 0) {%>
         <div class="box">
-    <p><%=staff.firstName%> is Qualified To Judge: 
+    <p><div class="inner"><%=staff.firstName%> is Qualified To Judge: </div>
         <ul>
             <% for (let i = 0; i < staff.qualifiedToJudge.length; i++) {%>
                 <li><%=staff.qualifiedToJudge[i]%></li>
@@ -70,7 +77,7 @@
         </ul>
     </p>
     <%if (staff.judging.length != 0) {%>
-    <p><%=staff.firstName%> is Judging: 
+    <p><div class="inner"><%=staff.firstName%> is Judging: </div>
         <ul>
             <%for (let i=0; i < staff.judging.length; i++) {%>
                 <li><%=staff.judging[i]%></li>
@@ -78,7 +85,7 @@
         </ul>
     </p>
     <%} else {%>
-        <p>but is not judging any divisions.</p>
+        <div class="inner"><p>but is not judging any divisions.</p></div>
         <%}%>
     </div>
     <%} else {%>
@@ -90,7 +97,7 @@
 
 <% if (staff.teaching.length != 0) {%>
     <div class="box">
-    <p><%=staff.firstName%> is teaching:
+    <p><div class="inner"><%=staff.firstName%> is teaching:</div>
 <ul>
 <% for (let i=0; i < staff.teaching.length; i++) {%>
     <li><%=staff.teaching[i]%></li>
@@ -104,9 +111,9 @@
 </div>
     <%}%>
 <div class="editBanner">
-<a href="/staff/<%=staff._id%>/edit">Edit Staff Member</a>
+<a href="/staff/<%=staff._id%>/edit" class="button">Edit Staff Member</a>
 <form action="/staff/<%=staff._id%>?_method=DELETE" method="POST">
-    <input type="submit" value="Delete Staff Member">
+    <input type="submit" class="deleteButton" value="Delete Staff Member">
 </form>
 </div>
     </main>

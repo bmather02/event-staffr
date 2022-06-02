@@ -1,36 +1,62 @@
 body {
-    background-color: rgb(212, 218, 226);
+    background-color: #3BACB6;
     display:flex;
     justify-content: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-wrap: wrap;
+}
+nav {
+    height: 12vh;
+    width: 80vw;
+    padding: 4vh 2vh 2vh 2vh;
+    margin: -2vh 0 0 0;
+    background-color: #B3E8E5;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav>div {
+    width: 35vw;
+    display: flex;
+    justify-content: space-between;
 }
 
 main {
-    background-color: rgb(234, 237, 241);
+    background-color: #B3E8E5;
     width: 80vw;
-    min-height: 98vh;
+    min-height: 75vh;
     padding: 2vh;
     margin: 2vh;
-    border-radius: 1%;
+    border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: flex-start;
 
 }
 
 div {
-    border: .05vw solid rgb(210, 216, 228);
-    border-radius: 1%;
-    box-shadow: .5vw .5vw 1.25vw gray;
-    background-color: rgb(238, 240, 242);
+    /* border: 2px solid red; */
 }
 
 .box {
-    height: 25vh;
-    width:25vw;
-    padding: 2.5vw;
-    margin: 2.5vw;
+    border: .05vw solid rgb(210, 216, 228);
+    border-radius: 5px;
+    box-shadow: .5vw .5vw 1.25vw #2F8F9D;
+    background-color: #FFFFFF;
+    color: black;
+    height: 28vh;
+    width:20vw;
+    padding: 1.5vw;
+    margin: 1.5vw;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
 }
 .editBanner {
     width: 65vw;
@@ -42,15 +68,112 @@ div {
 }
 .titleBanner {
     width: 65vw;
-    margin: 1vw 7.5vw;
+    margin: 1vw;
     padding: 1.5vw;
     display: flex;
     justify-content: center;
-    
+    text-shadow: .13vw .13vw .4vw #0d5964;
 }
 p {
-    font-size: 1.5vw;
+    font-size: 1.25vw;
 }
 ul{
-    font-size: 1.5vw;
+    font-size: 1.25vw;
+}
+h1 {
+    font-size: 3.5vw;
+}
+.button{
+    background-color: #2F8F9D;
+    padding: 1vw;
+    color: white;
+    border-radius: 5px;
+    font-size: 22px;
+    text-decoration: none;
+    text-shadow: .1vw .1vw .2vw #0d5964;
+    transition: 200ms;
+    border-style: none;
+}
+.button:hover{
+    background-color: #2F8F9D;
+    padding: 1vw;
+    color: white;
+    border-radius: 5px;
+    font-size: 22px;
+    text-decoration: none;
+    text-shadow: .1vw .1vw .2vw #0d5964;
+    box-shadow: 0 0 .5vw #0d5964;
+    border-style: none;
+}
+.deleteButton{
+    background-color: #2F8F9D;
+    padding: 1vw;
+    color: white;
+    border-radius: 5px;
+    font-size: 22px;
+    text-decoration: none;
+    text-shadow: .1vw .1vw .2vw #0d5964;
+    border-style: none;
+    transition: 200ms;
+}
+.deleteButton:hover {
+    background-color: #2F8F9D;
+    padding: 1vw;
+    color: white;
+    border-radius: 5px;
+    font-size: 22px;
+    text-decoration: none;
+    text-shadow: .1vw .1vw .2vw #0d5964;
+    box-shadow: 0 0 .5vw red;
+    border-style: none;
+    cursor:pointer;
+}
+.inner{
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    font-size: 1.25vw;
+}
+.logo{
+    height:16vh;
+    margin: -2.5vh 0 0 0;
+}
+.edit>form{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    width: 60vw;
+    color: black;
+    padding: 5vw 5vw 0 5vw;
+    box-shadow: .5vw .5vw 1.25vw #2F8F9D;
+    margin: 0 0 3vh 0;
+    display: flex;
+    flex-direction: column;
+}
+.edit>form>input{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.edit>form>.editBanner {
+    display: flex;
+    justify-content: center;
+}
+.add{
+    margin: auto 30vw;
+}
+.list {
+   text-decoration: none;
+   list-style: none;
+   width: 80vw;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   max-height: 200vh;
+}
+.checkbox {
+    margin: 0 1vw 0 0;
+}
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 2.5vw;
+    text-shadow: .1vw .1vw .2vw #0d5964;
 }

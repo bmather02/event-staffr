@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/style.css">
     <title>Document</title>
 </head>
 <body>
-    <a href="/">Back To Home Page</a>
-    <h1>Full Staff List</h1>
-    <a href="/staff/new">Add A New Staff Member</a>
-    <ul>
+    <nav>
+        <img src="https://bradleymather.com/wp-content/uploads/2022/06/Event_Staffr-removebg-preview.png" class="logo">
+        <a href="/" class="button">Back To Home Page</a>
+    </nav>
+    <main>
+    <h1 class="titleBanner">Full Staff List</h1>
+    <a href="/staff/new" class="button add">Add A New Staff Member</a>
+    <ul class="list">
         <%for (let i=0; i < staff.length; i++){%>
             <li><a href='/staff/<%=staff[i]._id%>'><%=staff[i].firstName%> <%=staff[i].lastName%></a>
             </li> <br/>
         <%}%>
     </ul>
+</main>
 </body>
 </html>

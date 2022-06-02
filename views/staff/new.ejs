@@ -4,29 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Add A New Staff Member</h1>
+    <nav>
+        <img src="https://bradleymather.com/wp-content/uploads/2022/06/Event_Staffr-removebg-preview.png" class="logo">
+        <div>
+        <a href="/" class="button">Home</a>
+        <a href="/staff" class="button">Back To Full Staff List</a>
+    </div>
+    </nav>
+    <main>
+    <h1 class="titleBanner">Add A New Staff Member</h1>
+    <div class="edit">
     <form action="/staff" method="POST">
         <input type="text" name="firstName" placeholder="First Name" required> <br/>
         <input type="text" name="lastName" placeholder="Last Name" required> <br/>
         <input type="text" name="partner" placeholder="Partner's First and Last Name">
        <p>Administrative Skills:</p>
+       <div>
        <label for="scoring">Scoring</label>
-        <input type="checkbox" id="scoring" name="scoring">
+        <input class="checkbox" type="checkbox" id="scoring" name="scoring">
         <label for="emcee">Emcee</label>
-        <input type="checkbox" id="emcee" name="emcee">
+        <input class="checkbox" type="checkbox" id="emcee" name="emcee">
         <label for="floorMom">Floor Mom</label>
-        <input type="checkbox" id="floorMom" name="floor_Mom">
+        <input class="checkbox" type="checkbox" id="floorMom" name="floor_Mom">
         <label for="contestCoordinator">Contest Coordinator</label>
-        <input type="checkbox" id="contestCoordinator" name="contest_Coordinator">
+        <input class="checkbox" type="checkbox" id="contestCoordinator" name="contest_Coordinator">
         <label for="hospitality">Hospitality</label>
-        <input type="checkbox" id="hospitality" name="hospitality">
+        <input class="checkbox" type="checkbox" id="hospitality" name="hospitality">
         <label for="scrutineering">Scrutineering</label>
-        <input type="checkbox" id="scrutineering" name="scrutineering">
+        <input class="checkbox" type="checkbox" id="scrutineering" name="scrutineering">
         <label for="regDesk">Registration Desk</label>
-        <input type="checkbox" id="regDesk" name="registration_Desk"><br/>
+        <input class="checkbox" type="checkbox" id="regDesk" name="registration_Desk"><br/>
+    </div>
         <p>Arrival Time</p>
         <input type="datetime-local" name="arrival" required> <br/>
         <p>Departure Time</p>
@@ -39,13 +51,13 @@
         </p>
         <div id="proam">
             <label for="Newcomer">Newcomer</label>
-            <input type="checkbox" id="Newcomer" name="Newcomer">
+            <input class="checkbox" type="checkbox" id="Newcomer" name="Newcomer">
             <label for="Novice">Novice</label>
-            <input type="checkbox" id="Novice" name="Novice">
+            <input class="checkbox" type="checkbox" id="Novice" name="Novice">
             <label for="Intermediate">Intermediate</label>
-            <input type="checkbox" id="Intermediate" name="Intermediate">
+            <input class="checkbox" type="checkbox" id="Intermediate" name="Intermediate">
             <label for="Advanced">Advanced</label>
-            <input type="checkbox" id="Advanced" name="Advanced">
+            <input class="checkbox" type="checkbox" id="Advanced" name="Advanced">
         </div>
         <p>Is this staff member competing professionally?
             <label for="isCompeting">Yes</label>
@@ -55,32 +67,38 @@
         </p>
         <div id="pro">
             <label for="Division_II">Division II</label>
-            <input type="checkbox" id="Division_II" name="Division_II">
+            <input class="checkbox" type="checkbox" id="Division_II" name="Division_II">
             <label for="Division_I">Division I</label>
-            <input type="checkbox" id="Division_I" name="Division_I">
+            <input class="checkbox" type="checkbox" id="Division_I" name="Division_I">
             <label for="Masters">Masters</label>
-            <input type="checkbox" id="Masters" name="Masters">
+            <input class="checkbox" type="checkbox" id="Masters" name="Masters">
             <label for="Crown">Crown</label>
-            <input type="checkbox" id="Crown" name="Crown">
+            <input class="checkbox" type="checkbox" id="Crown" name="Crown">
         </div>
         <p>Qualified To Judge:</p>
+        <div>
         <label for="couplesApprentice">Couples Apprentice</label>
-        <input type="checkbox" id="couplesApprentice" name="couplesApprentice">
+        <input class="checkbox" type="checkbox" id="couplesApprentice" name="couplesApprentice">
         <label for="lineApprentice">Line Apprentice</label>
-        <input type="checkbox" id="lineApprentice" name="lineApprentice">
+        <input class="checkbox" type="checkbox" id="lineApprentice" name="lineApprentice">
         <label for="couplesFundamental">Couples Fundamental</label>
-        <input type="checkbox" id="couplesFundamental" name="couplesFundamental">
+        <input class="checkbox" type="checkbox" id="couplesFundamental" name="couplesFundamental">
         <label for="lineFundamental">Line Fundamental</label>
-        <input type="checkbox" id="lineFundamental" name="lineFundamental">
+        <input class="checkbox" type="checkbox" id="lineFundamental" name="lineFundamental">
         <label for="couplesJourneyman">Couples Journeyman</label>
-        <input type="checkbox" id="couplesJourneyman" name="couplesJourneyman">
+        <input class="checkbox" type="checkbox" id="couplesJourneyman" name="couplesJourneyman">
         <label for="lineJourneyman">Line Journeyman</label>
-        <input type="checkbox" id="lineJourneyman" name="lineJourneyman">
+        <input class="checkbox" type="checkbox" id="lineJourneyman" name="lineJourneyman">
         <label for="couplesMaster">Couples Master</label>
-        <input type="checkbox" id="couplesMaster" name="couplesMaster">
+        <input class="checkbox" type="checkbox" id="couplesMaster" name="couplesMaster">
         <label for="lineMaster">Line Master</label>
-        <input type="checkbox" id="lineMaster" name="lineMaster"><br/>
-        <input type="submit" value="Add Staff Member">
+        <input class="checkbox" type="checkbox" id="lineMaster" name="lineMaster"><br/>
+        </div>
+        <div class="editBanner">
+            <input type="submit" value="Add Staff Member" class="button">
+        </div>
     </form>
+</div>
+</main>
 </body>
 </html>
