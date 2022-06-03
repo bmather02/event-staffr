@@ -14,8 +14,6 @@ Event-Staffr is a staff management and planning software designed to allow event
 ## Wireframe
 ![wireframe](https://bradleymather.com/wp-content/uploads/2022/06/Project-2-Wireframe.png)
 
-## Project Planning
-![project planning](https://bradleymather.com/wp-content/uploads/2022/06/Screen-Shot-2022-06-02-at-4.16.17-PM.png)
 ## Screenshots
 ![screenshot of deployed application](https://bradleymather.com/wp-content/uploads/2022/06/Screen-Shot-2022-06-02-at-3.15.14-PM-2.png)
 ![screenshot of deployed application](https://bradleymather.com/wp-content/uploads/2022/06/Screen-Shot-2022-06-02-at-3.15.27-PM-2.png)
