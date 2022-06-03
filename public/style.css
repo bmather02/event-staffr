@@ -224,7 +224,7 @@ div {
     box-shadow: .5vw .5vw 1.25vw #2F8F9D;
     background-color: #FFFFFF;
     color: black;
-    height: 28vh;
+    min-height: 28vh;
     width:20vw;
     padding: 1.5vw;
     margin: 1.5vw;
