@@ -7,6 +7,7 @@ Event-Staffr is a staff management and planning software designed to allow event
 - Mongoose
 - MongoDB
 - Express
+- EJS
 - HTML5
 - CSS3  
   
