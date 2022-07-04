@@ -1,5 +1,5 @@
 # Event-Staffr
-Event-Staffr is a staff management and planning software designed to allow event directors of the United Country Western Dance Council to streamline the process of finding available judges, teachers, and administrative assistants.  
+Event-Staffr is a staff management and planning web application designed to allow event directors of the United Country Western Dance Council to streamline the process of finding available judges, teachers, and administrative assistants.  
   
 
 ## Technologies Used
